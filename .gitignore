@@ -1,4 +1,4 @@
-node_modules
-dist
-package-lock.json
+agregator/node_modules
+agregator/dist
+agregator/package-lock.json
 .idea
