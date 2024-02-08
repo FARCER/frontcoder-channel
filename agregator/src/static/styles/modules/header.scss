@@ -1,0 +1,105 @@
+header {
+	flex: 0 0 auto;
+	border-bottom: 1px solid $header-border-color;
+	background-color: $white;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&__actions {
+		display: flex;
+	}
+}
+
+.header-nav {
+	&__list {
+		display: flex;
+		font-weight: 800;
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-right: $base-gutter * 8;
+		}
+	}
+
+	&__link {
+		color: $base-text-color;
+		text-decoration: none;
+		transition: color linear .3s;
+		display: block;
+		padding: $base-gutter * 5 0;
+
+		&:hover {
+			color: $accent-color;
+		}
+	}
+}
+
+.compare-link {
+	padding: $base-gutter * 5 $base-gutter * 6;
+	border-left: 1px solid $header-border-color;
+	border-right: 1px solid $header-border-color;
+	position: relative;
+
+	&__link {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		z-index: 1;
+	}
+
+	&__counter {
+		width: $base-gutter * 3;
+		height: $base-gutter * 3;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		line-height: 15px;
+		font-size: 10px;
+		background-color: $accent-color;
+		color: $white;
+	}
+
+	&__content {
+		position: relative;
+	}
+
+	&__counter {
+		position: absolute;
+		right: -$base-gutter;
+		top: -$base-gutter * 2;
+	}
+}
+
+.search-form {
+	border-right: 1px solid $header-border-color;
+	width: $base-gutter * 84;
+	flex-shrink: 0;
+	position: relative;
+
+	&__input {
+		padding-left: $base-gutter * 13;
+		border: none;
+		box-shadow: none;
+		outline: none;
+		height: 100%;
+	}
+
+	&__icon {
+		position: absolute;
+		left: $base-gutter * 6;
+		top: $base-gutter * 6;
+	}
+}
+
+.logo {
+	font-size: 24px;
+	font-weight: 800;
+}

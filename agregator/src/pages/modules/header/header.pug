@@ -1,0 +1,19 @@
+header
+  .container
+    .header
+      .logo.header__logo
+        span Logo
+      nav.header__header-nav.header-nav
+        ul.header-nav__list
+          each item in [{link:"courses.html",title:'Курсы'},{link:"",title:'Школы'},{link:"",title:'Отзывы о школах'},{link:"",title:'Акции школ'},{link:"",title:'Блог'}]
+            li.header-nav__item
+              a(href=item.link).header-nav__link=item.title
+      .header__actions
+        .header__compare-link.compare-link
+          a(href="").compare-link__link
+          .compare-link__content
+            img(src="./static/images/icons/compare.svg").compare-link__icon
+            span.compare-link__counter 3
+        form.header__search-form.search-form
+          img(src="./static/images/icons/search.svg").search-form__icon
+          input(placeholder="Искать курсы").search-form__input

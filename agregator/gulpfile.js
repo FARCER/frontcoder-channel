@@ -19,6 +19,11 @@ function clean() {
   return del('dist');
 }
 
+function fonts() {
+  return src('./src/static/fonts/*.*')
+    .pipe(dest('./dist/static/fonts'))
+}
+
 function pugHtml() {
   return src('./src/pages/**/*.pug')
     .pipe(
@@ -30,35 +35,22 @@ function pugHtml() {
 }
 
 function buildStyles() {
-  return src('./src/static/styles/**/*.scss')
+  return src('./src/static/styles/styles.scss')
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(dest('./dist/static/css'))
     .pipe(browserSync.stream());
 }
 
-function jsTranspile(cb) {
-  // body omitted
-  cb();
-}
-
-function jsBundle(cb) {
-  // body omitted
-  cb();
-}
-
-function jsMinify(cb) {
-  // body omitted
-  cb();
-}
-
-function publish(cb) {
-  // body omitted
-  cb();
+function images() {
+  return src('./src/static/images/**/*.*')
+    .pipe(dest('./dist/static/images'))
 }
 
 exports.default = series(
   clean,
   parallel(
+    fonts,
+    images,
     pugHtml,
     buildStyles
   ),

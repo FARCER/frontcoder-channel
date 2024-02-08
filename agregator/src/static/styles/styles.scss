@@ -1,3 +1,42 @@
-body {
-	background-color: red;
+@import './node_modules/normalize.css/normalize';
+@import "./utils/utils";
+@import "./modules/modules";
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+html, body {
+	height: 100%;
+	font-family: OpenSans, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 22px;
+	color: $base-text-color;
+	background-color: $main-bg-color;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.content {
+	flex: 1;
+}
+
+.container {
+	max-width: $container-width;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.bg-white {
+	background-color: $white;
 }

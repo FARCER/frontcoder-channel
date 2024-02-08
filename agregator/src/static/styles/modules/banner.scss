@@ -1,0 +1,21 @@
+.banner-s {
+	background-image: url("../images/contents/index-page/banner.png");
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-size: contain;
+}
+
+.banner {
+	padding: $base-gutter * 30 0;
+	max-width: $base-gutter * 103;
+
+	&__title {
+		font-size: 36px;
+		margin-bottom: $base-gutter * 5;
+	}
+
+	&__description {
+		font-size: 18px;
+		line-height: 30px;
+	}
+}
