@@ -1,0 +1,15 @@
+:host {
+  display: block;
+  width: 500px;
+  max-width: 100%;
+  margin: 50px auto;
+}
+
+form {
+  margin-bottom: 40px;
+}
+.completed {
+  span {
+    text-decoration: line-through;
+  }
+}

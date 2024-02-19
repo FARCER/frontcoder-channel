@@ -1,0 +1,15 @@
+<h1>Todo</h1>
+<form [formGroup]="form">
+  <input type="text" formControlName="todo" (keyup.enter)="submit()">
+</form>
+<div class="list">
+  @for (item of todos; track item.id) {
+    <div class="item" [ngClass]="{'completed' : item.isCompleted}">
+      <input (change)="toggleTodo($event, item)" type="checkbox">
+      <span class="item__text"> {{ item.title }} </span>
+    </div>
+  } @empty {
+    There are no items.
+  }
+
+</div>
