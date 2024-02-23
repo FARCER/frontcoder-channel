@@ -1,0 +1,20 @@
+mixin articlePrev(title)
+  .article-prev
+    span.article-prev__tag Онлайн курсы по маркетингу
+    .article-prev__img
+    .article-prev__body
+      span.article-prev__title=title
+    .article-prev__footer
+      span.article-prev__date 1 сентября
+      .btn.is-light
+        a(href="").btn__link
+        span Подробнее
+
+
+section.s-blog-preview.bg-white
+  .container
+    h2 Блог
+    .blog-preview
+      +articlePrev('Топ-10 онлайн-курсов по интернет-маркетингу Топ-10 онлайн-курсов по интернет-маркетингу')
+      +articlePrev('Топ-10 онлайн-курсов по интернет-маркетингу')
+      +articlePrev('Топ-10 онлайн-курсов по интернет-маркетингу')

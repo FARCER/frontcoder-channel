@@ -1,0 +1,26 @@
+.advantages {
+	display: flex;
+	gap: $base-gutter * 14;
+}
+
+.advantage {
+	&__header {
+		display: flex;
+		margin-bottom: $base-gutter * 5;
+	}
+
+	&__title {
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 27px;
+	}
+
+	&__icon {
+		flex-shrink: 0;
+		margin-right: $base-gutter * 6;
+	}
+
+	p {
+		color: $light-text-color;
+	}
+}

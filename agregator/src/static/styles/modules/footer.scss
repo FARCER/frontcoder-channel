@@ -1,4 +1,54 @@
+footer {
+	flex: 0 0 auto;
+	background-color: $footer-bg-color;
+}
 
 .footer {
-	flex: 0 0 auto;
+	color: $footer-text-color;
+
+	a {
+		color: $footer-text-color;
+		text-decoration: none;
+	}
+
+	&-top {
+		padding: $base-gutter * 10 0;
+		border-bottom: 1px solid $footer-line-color;
+	}
+
+	&-bottom {
+		padding: $base-gutter * 4 0;
+
+		&__content {
+			display: flex;
+			align-items: center;
+		}
+
+		&__right {
+			margin-left: auto;
+
+			& > * {
+				&:not(:last-child) {
+					margin-right: $base-gutter * 10;
+				}
+			}
+		}
+	}
+
+	&__small-logo {
+		margin-right: $base-gutter * 10;
+	}
+}
+
+.small-logo {
+	text-transform: uppercase;
+	color: $white;
+	font-weight: 600;
+	line-height: 15px;
+}
+
+.copyright,
+.user-agreement {
+	font-size: 12px;
+	line-height: 15px;
 }

@@ -1,0 +1,33 @@
+.btn {
+	border-radius: 50px;
+	line-height: 33px;
+	border: 1px solid $btn-base-border-color;
+	padding: 0 $base-gutter * 6;
+	position: relative;
+	font-weight: 600;
+	font-size: 12px;
+	transition: background-color linear .3s;
+
+	&:hover {
+		background-color: #f2f2f2;
+	}
+
+	&__link {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+	}
+
+	&.is-light {
+		color: $light-text-color;
+		border-color: $btn-light-border-color;
+	}
+
+	&.is-accent {
+		color: $white;
+		background-color: $btn-accent-bg-color;
+		border-color: $btn-accent-border-color;
+	}
+}

@@ -16,7 +16,7 @@ html, body {
 	height: 100%;
 	font-family: OpenSans, Arial, sans-serif;
 	font-size: 14px;
-	line-height: 22px;
+	line-height: 24px;
 	color: $base-text-color;
 	background-color: $main-bg-color;
 }
@@ -39,4 +39,8 @@ html, body {
 
 .bg-white {
 	background-color: $white;
+}
+
+section {
+	padding: $base-gutter * 10 0;
 }
