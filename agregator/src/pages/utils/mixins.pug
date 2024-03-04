@@ -2,3 +2,9 @@ mixin btn(title)
   .btn.is-light
     a(href="").btn__link
     span=title
+
+
+mixin icon(name,mod)
+  - mod = mod || ''
+  svg(class="icon icon-" + name + ' ' + mod)
+    use(xlink:href="static/images/icons/symbol/sprite.svg#" + name)

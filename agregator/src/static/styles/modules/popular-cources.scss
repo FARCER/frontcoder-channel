@@ -1,0 +1,25 @@
+.popular-courses-nav {
+	display: flex;
+	align-items: center;
+	margin-bottom: $base-gutter * 7;
+	justify-content: space-between;
+
+	&__item {
+		line-height: 36px;
+		padding: 0 $base-gutter * 4;
+		border-radius: 50px;
+		font-weight: 600;
+		cursor: pointer;
+		transition: background-color linear .3s;
+
+		&:not(:last-child) {
+			margin-right: $base-gutter;
+		}
+
+		&:hover,
+		&.is-active{
+			background-color: $accent-color;
+			color: $white;
+		}
+	}
+}

@@ -1,7 +1,24 @@
+mixin footerNavBlock(title, items)
+  .footer-nav-block
+    span.footer-nav-block__title=title
+    ul.footer-nav-block__list
+      each link in items
+        li
+          a(href="")=link
+
+
 footer
   .footer
     .footer-top
       .container
+        nav.footer-nav
+          +footerNavBlock('Категории',['Программирование', 'Маркетинг', 'Дизайн', 'Управление', 'Контент-маркетинг'])
+          +footerNavBlock('Школы',['Skillbox', 'Geekbrains', 'Нетология', 'Skillfactory', 'Convertmonster'])
+          +footerNavBlock('Отзывы о школах',['Отзывы о Skillbox', 'Отзывы о Geekbrains', 'Отзывы о Нетология', 'Отзывы о Skillfactory', 'Отзывы о Convertmonster'])
+          +footerNavBlock('Курсы',['С дипломом', 'С трудоустройстовом', 'Платные', 'Бесплатные', 'Ближайшие по дате старта'])
+          +footerNavBlock('Уровень сложности',['Начальный', 'Средний', 'Профессиональный', 'Для детей'])
+
+
     .footer-bottom
       .container
         .footer-bottom__content
@@ -11,4 +28,3 @@ footer
           .footer-bottom__right
             ul.social-list
             a(href="").user-agreement Пользовательское соглашение
-

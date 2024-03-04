@@ -3,25 +3,33 @@ mixin courseLine(title)
     .course-line__name
       span=title
     .course-line__school.course-line-school
-      span.course-line-school__name
-      .course-line-school__rating 4.5
+      span.course-line-school__name Skillbox
+      .course-line-school__rating.rating 4.5
       span.course-line-school__review Отзывы о школе 58
     .course-line__price.course-line-price
       span.course-line-price__old 85 000 руб
-      span.course-line-price__current 66 800 руб
-      span.course-line-price__credit от 4 745 руб./месяц
-    .course-line__price.course-line-price
-      span.course-line-price__old 85 000 руб
-      span.course-line-price__current 66 800 руб
-      span.course-line-price__credit от 4 745 руб./месяц
+      .course-line-price__current 66 800
+        span руб
+      .course-line-price__credit от
+        span 4 745
+        | руб./месяц
     .course-line__duration.course-line-duration
-      span В любое время
+      +icon('clock')
+      span В любое<br> время
     .course-line__advantages.course-line-advantages
       ul.course-line-advantages__list
-        li 3 месяца
-        li Начальный
-        li Стажировка
-        li Диплом
+        li
+          +icon('calendar')
+          | 3 месяца
+        li
+          +icon('calendar')
+          | Начальный
+        li
+          +icon('suitcase')
+          | Стажировка
+        li
+          +icon('diplom')
+          | Диплом
     .course-line__link.course-line-link
       .btn.is-accent
         a(href="").btn__link
@@ -29,15 +37,19 @@ mixin courseLine(title)
       .btn
         a(href="").btn__link
         span Подробнее
+      .btn.is-light.is-no-border.is-small
+        a(href="").btn__link
+        +icon('shuffle')
+        span Добавить к сравнению
 
 
 section.s-popular-cources.bg-white
   .container
     h2 Популярные онлайн-курсы
-    .popular-cources
+    .popular-courses
       ul.popular-courses__nav.popular-courses-nav
-        each item in ['Программирование','Маркетинг','Дизайн','Аналитика','Финансы','Управление','Контент-маркетинг','Иностранные языки']
-          li.popular-courses-nav__item=item
+        each item, index in ['Программирование','Маркетинг','Дизайн','Аналитика','Финансы','Управление','Контент-маркетинг','Иностранные языки']
+          li.popular-courses-nav__item(class=`${index === 4 ? 'is-active' : ''}`)=item
       .popular-cources__body
         +courseLine('Профессия веб-разработчик')
         +courseLine('Профессия веб-разработчик')

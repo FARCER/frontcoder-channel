@@ -52,3 +52,31 @@ footer {
 	font-size: 12px;
 	line-height: 15px;
 }
+
+.footer-nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-nav-block {
+
+	&__title {
+		color: $white;
+		font-weight: 600;
+		text-transform: uppercase;
+		display: block;
+		margin-bottom: $base-gutter * 3;
+		font-size: 18px;
+	}
+
+	li {
+		&:not(:last-child) {
+			margin-bottom: $base-gutter;
+		}
+	}
+
+	a {
+		font-size: 16px;
+		color: $light-text-color;
+	}
+}

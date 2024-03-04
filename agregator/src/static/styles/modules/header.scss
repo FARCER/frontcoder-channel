@@ -76,6 +76,11 @@ header {
 		right: -$base-gutter;
 		top: -$base-gutter * 2;
 	}
+
+	&__icon {
+		width: 28px;
+		height: 22px;
+	}
 }
 
 .search-form {
@@ -96,6 +101,8 @@ header {
 		position: absolute;
 		left: $base-gutter * 6;
 		top: $base-gutter * 6;
+		width: 20px;
+		height: 20px;
 	}
 }
 

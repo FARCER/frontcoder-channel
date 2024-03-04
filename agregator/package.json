@@ -17,6 +17,8 @@
     "sass": "^1.70.0"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "gulp-svg-sprite": "^2.0.3",
+    "normalize.css": "^8.0.1",
+    "svg4everybody": "^2.1.9"
   }
 }

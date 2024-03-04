@@ -1,6 +1,9 @@
 .btn {
 	border-radius: 50px;
 	line-height: 33px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	border: 1px solid $btn-base-border-color;
 	padding: 0 $base-gutter * 6;
 	position: relative;
@@ -10,6 +13,17 @@
 
 	&:hover {
 		background-color: #f2f2f2;
+	}
+
+	& > * {
+		&:not(:last-child) {
+			margin-right: $base-gutter * 2;
+		}
+	}
+
+	.icon {
+		width: 15px;
+		height: 15px;
 	}
 
 	&__link {
@@ -23,6 +37,14 @@
 	&.is-light {
 		color: $light-text-color;
 		border-color: $btn-light-border-color;
+	}
+
+	&.is-no-border {
+		border: none;
+		line-height: 35px;
+	}
+	&.is-small {
+		font-size: 10px;
 	}
 
 	&.is-accent {

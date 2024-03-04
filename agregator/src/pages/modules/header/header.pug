@@ -12,8 +12,8 @@ header
         .header__compare-link.compare-link
           a(href="").compare-link__link
           .compare-link__content
-            img(src="./static/images/icons/compare.svg").compare-link__icon
+            +icon('compare','compare-link__icon')
             span.compare-link__counter 3
         form.header__search-form.search-form
-          img(src="./static/images/icons/search.svg").search-form__icon
+          +icon('search','search-form__icon')
           input(placeholder="Искать курсы").search-form__input
