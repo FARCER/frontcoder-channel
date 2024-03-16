@@ -1,0 +1,16 @@
+.header {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+
+
+}
+
+.auth-action {
+  & > * {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}

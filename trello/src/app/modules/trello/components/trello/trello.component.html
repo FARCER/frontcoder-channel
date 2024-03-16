@@ -1,0 +1,24 @@
+<ng-container *ngIf="!isAdmin()">
+  <div class="form">
+    <form [formGroup]="form" (submit)="submit()">
+      <mat-form-field class="example-full-width">
+        <mat-label>Task</mat-label>
+        <input formControlName="task" matInput placeholder="task">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Worker</mat-label>
+        <mat-select formControlName="worker">
+          @for (user of users; track user) {
+          <mat-option  [value]="user.login">{{user.login}}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <button [disabled]="!form.valid" mat-raised-button color="primary">Submit</button>
+    </form>
+  </div>
+  <app-trello-list #trelloListComponent></app-trello-list>
+</ng-container>
+<ng-container *ngIf="isAdmin()">
+  <h2>All tasks</h2>
+  <div *ngFor="let task of tasks">{{task | json}}</div>
+</ng-container>
