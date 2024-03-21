@@ -1,4 +1,33 @@
+mixin courseDirectionsItem(title,mod)
+  li.course-directions-nav__item(data-list-target=title, class=mod)
+    span.course-directions-nav__title=title
+
+mixin courseDirectionsContent(title,list,mod)
+  ul.course-directions-content__list(data-list-name=title, class=mod)
+    each item in list
+      li.course-directions-content__item=item
+        a(href="")
+
 section.s-course-directions
   .container
     h2 Направления курсов
     .course-directions
+      ul.course-directions-nav
+        +courseDirectionsItem('Программирование','is-active')
+        +courseDirectionsItem('Маркетинг')
+        +courseDirectionsItem('Дизайн')
+        +courseDirectionsItem('Аналитика')
+        +courseDirectionsItem('Финансы')
+        +courseDirectionsItem('Управление')
+        +courseDirectionsItem('Контент-маркетинг')
+
+      .course-directions-content
+        +courseDirectionsContent('Программирование',['Все курсы по программированию', 'Python-разработка', 'Web-разработка', 'Мобильная разработка', 'JavaScript-разработка', 'Java-разработка', 'Разработка игр', 'Создание сайтов', 'Системное администрирование', 'QA-тестирование', 'Android-разработка', 'Управление разработкой и IT', 'Frontend-разработка', 'Разработка игр на Unity', 'Разработка на C#', 'PHP-разработка', 'DevOps', 'IOS-разработка', 'Верстка на HTML/CSS', 'Разработка на C++', 'Разработка игр на Unreal Engine', 'Разработка на Kotlin', 'Информационная безопасность', 'Golang-разработка', 'Разработка на Swift', '1C-разработка', 'VR/AR разработка', 'Фреймворк Laravel'], 'is-active')
+        +courseDirectionsContent('Маркетинг',['Разработка на C++', 'Разработка игр на Unreal Engine', 'Разработка на Kotlin', 'Информационная безопасность', 'Golang-разработка', 'Разработка на Swift', '1C-разработка', 'VR/AR разработка', 'Фреймворк Laravel', 'QA-тестирование', 'Android-разработка', 'Управление разработкой и IT', 'Frontend-разработка', 'Разработка игр на Unity', 'Разработка на C#', 'PHP-разработка', 'DevOps', 'IOS-разработка', 'Верстка на HTML/CSS',])
+        +courseDirectionsContent('Дизайн',['Разработка на C#', 'PHP-разработка', 'DevOps', 'IOS-разработка', 'Верстка на HTML/CSS', 'Разработка на C++', 'Разработка игр на Unreal Engine', 'Разработка на Kotlin', 'Информационная безопасность', 'Golang-разработка', 'Разработка на Swift', '1C-разработка', 'VR/AR разработка', 'Фреймворк Laravel'])
+        +courseDirectionsContent('Аналитика',['Разработка на C#', 'PHP-разработка', 'DevOps', 'IOS-разработка', 'Верстка на HTML/CSS', 'Разработка на C++', 'Все курсы по программированию', 'Python-разработка', 'Web-разработка', 'Мобильная разработка', 'JavaScript-разработка', 'Java-разработка', 'Разработка игр', 'Создание сайтов', 'Системное администрирование', 'QA-тестирование', 'Android-разработка', 'Управление разработкой и IT', 'Frontend-разработка', 'Разработка игр на Unity'])
+        +courseDirectionsContent('Финансы',['Все курсы по программированию', 'Python-разработка', 'Web-разработка', 'Мобильная разработка', 'JavaScript-разработка', 'Java-разработка', 'Разработка игр', 'Создание сайтов', 'Системное администрирование', 'QA-тестирование', 'Разработка на Kotlin', 'Информационная безопасность', 'Golang-разработка', 'Разработка на Swift', '1C-разработка', 'VR/AR разработка', 'Фреймворк Laravel'])
+        +courseDirectionsContent('Управление',['Golang-разработка', 'Разработка на Swift', '1C-разработка', 'VR/AR разработка', 'Фреймворк Laravel'])
+        +courseDirectionsContent('Контент-маркетинг',['Все курсы по программированию', 'Python-разработка', 'Web-разработка', 'Мобильная разработка', 'JavaScript-разработка', 'Java-разработка', 'Разработка игр', 'Создание сайтов', 'Системное администрирование', 'Разработка на C++', 'Разработка игр на Unreal Engine', 'Разработка на Kotlin', 'Информационная безопасность', 'Golang-разработка', 'Разработка на Swift', '1C-разработка', 'VR/AR разработка', 'Фреймворк Laravel'])
+
+

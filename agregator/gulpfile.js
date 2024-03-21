@@ -37,7 +37,8 @@ function clean() {
 
 function js() {
   return src('./src/static/scripts/*.*')
-    .pipe(dest('./dist/static/scripts'));
+    .pipe(dest('./dist/static/scripts'))
+    .pipe(browserSync.stream());
 }
 
 function fonts() {

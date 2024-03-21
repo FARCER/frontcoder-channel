@@ -1,0 +1,36 @@
+.social-list {
+	display: flex;
+
+	svg {
+		fill: $white;
+		width: $base-gutter * 5;
+		height: $base-gutter * 5;
+		transition: fill linear .1s;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+
+		&:not(:last-child) {
+			margin-right: $base-gutter * 3;
+		}
+
+		&:hover {
+			svg {
+				fill: $accent-color;
+
+			}
+		}
+	}
+
+	a {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+}

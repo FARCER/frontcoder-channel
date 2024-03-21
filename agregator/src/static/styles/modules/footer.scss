@@ -25,6 +25,8 @@ footer {
 		}
 
 		&__right {
+			display: flex;
+			align-items: center;
 			margin-left: auto;
 
 			& > * {
@@ -66,12 +68,13 @@ footer {
 		text-transform: uppercase;
 		display: block;
 		margin-bottom: $base-gutter * 3;
-		font-size: 18px;
+		font-size: 13px;
+		letter-spacing: 2px;
 	}
 
 	li {
 		&:not(:last-child) {
-			margin-bottom: $base-gutter;
+			margin-bottom: $base-gutter * 2;
 		}
 	}
 

@@ -6,6 +6,11 @@ mixin footerNavBlock(title, items)
         li
           a(href="")=link
 
+mixin socialLink(icon)
+  li.social-list__item
+    a(href="")
+    +icon(icon)
+
 
 footer
   .footer
@@ -27,4 +32,9 @@ footer
           span.copyright © 2021. Logo. Все права защищены
           .footer-bottom__right
             ul.social-list
+              +socialLink('vk')
+              +socialLink('telegram')
+              +socialLink('instagram')
+              +socialLink('youtube')
+              +socialLink('fb')
             a(href="").user-agreement Пользовательское соглашение
