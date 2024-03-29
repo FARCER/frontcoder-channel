@@ -1,0 +1,16 @@
+.schools-slider {
+	display: flex;
+	margin: 0 -15px;
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $white;
+		box-shadow: 0 4px 26px rgba(203, 203, 203, 0.25);
+		border-radius: 5px;
+		margin: 0 $base-gutter * 1.5;
+		height: $base-gutter * 45;
+		flex: 0 0 calc(25% - 7.5px);
+	}
+}
