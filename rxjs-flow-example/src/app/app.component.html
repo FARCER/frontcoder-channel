@@ -1,0 +1,10 @@
+<input type="text">
+
+<ng-container *ngIf="model$ | async as model">
+  <div class="preloader" *ngIf="model.state === 'PENDING'">Loading....</div>
+  <div class="error" *ngIf="model.state === 'ERROR'">ERROR
+    <span (click)="reload$.next(null)">Reload</span></div>
+  <ng-container *ngIf="model.state === 'READY'">
+    <div *ngFor="let i of model.data">{{i}}</div>
+  </ng-container>
+</ng-container>
